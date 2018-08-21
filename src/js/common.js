@@ -383,3 +383,73 @@ function animate(ele,opt,callback){
 function type(data){
 	return Object.prototype.toString.call(data).slice(8,-1).toLowerCase();
 }
+
+
+
+
+var CountDown = function(end,callback){
+	// 2）不断拿当前时间跟结束时间对比，计算差值(单位：s)
+	var offset = Math.round((Date.parse(end) - Date.now())/1000);//65
+
+	// 倒计时结束
+	if(offset <= 0){
+		 // 停止定时器
+		clearInterval(timer);
+
+		// 倒计时结束后执行回掉函数
+		if(typeof callback === 'function'){
+			callback();
+		}
+	}
+
+	// 3）把差值转换成《剩余时间》
+	var sec = offset%60;
+	var min = Math.floor(offset/60)%60;
+	var hour = Math.floor(offset/60/60)%24;//26h=>1d2h
+	var day = Math.floor(offset/60/60/24);
+
+	// 补0操作
+	sec = sec<10 ? '0'+sec : sec;
+	min = min<10 ? '0'+min : min;
+	hour = hour<10 ? '0'+hour : hour;
+
+	return hour + ':' + min + ':' + sec;
+}
+
+
+var Element = {
+	get:function(nodes){
+		//保留元素节点
+		var res = [];
+
+		for(var i=0;i<nodes.length;i++){
+			if(nodes[i].nodeType === 1){
+				res.push(nodes[i]);
+			}
+		}
+		return res;
+	},
+	children:function(node){
+		return node.children;
+	},
+
+	// 获取下一个元素
+	next:function(ele){
+
+	},
+
+	// 前一个元素
+	prev:function(ele){
+
+	}
+}
+
+
+//Elment.get(box.childNodes);//[text,ul,text] => [ul]
+//Elemewnt.children(box);//[ul]
+
+//封装一个兼容IE8-的浏览器的方法发
+//通过类名获取元素
+function getElementsByClass(name){
+	var elements = document.getElementsByTagName('*');//得到页面所有元素
+}

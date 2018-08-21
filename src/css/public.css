@@ -84,7 +84,7 @@ header .top-t #daohang { width: 100%; background-color: #10286C; }
 
 header .top-t #daohang #top-b { height: 40px; width: 1200px; position: relative; }
 
-header .top-t #daohang #top-b .lei { width: 179px; height: 40px; background-color: #FF6600; padding-left: 20px; position: relative; }
+header .top-t #daohang #top-b .lei {position:absolute; left:-15px;top:0;width: 179px; height: 40px; background-color: #FF6600; padding-left: 20px; position: relative; }
 
 header .top-t #daohang #top-b .lei .zennbu { line-height: 40px; color: #fff; }
 
@@ -118,7 +118,7 @@ header .top-t #daohang #top-b .home .hov5 { width: 96px; }
 
 header .top-t #daohang #top-b .home .hov5:hover { background-color: #0036D9; }
 
-header .top-t #daohang #top-b .home-r { position: absolute; left: 974px; top: 0; background: #FF6600; width: 250px; }
+header .top-t #daohang #top-b .home-r { position: absolute; left: 955px; top: 0; background: #FF6600; width: 230px; }
 
 header .top-t #daohang #top-b .home-r .cart { position: relative; width: 113px; height: 40px; line-height: 40px; color: #fff; float: left; padding-left: 6px; border: 1px solid #FF6600; }
 

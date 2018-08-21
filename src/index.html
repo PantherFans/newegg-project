@@ -4,16 +4,22 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/base.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/jquery-3.2.1.js"></script>
         <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.css">
-        <title>新蛋中国,领先的网上购物商城-手机 电脑 数码 家电 服装 化妆品 家居 食品等,正品低价,货到付款。 - 新蛋中国</title>
+        <title>新蛋中国</title>
 
+
+        <!-- <link rel="stylesheet" type="text/css" href="lib/.css" /> -->
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/banner.css" />
         <link rel="stylesheet" href="font/iconfont.css" />
         <!-- 第1步：引入jquery -->
-        <script src="js/jquery-3.2.1.js"></script>
+        
         <!-- 第2步：引入插件 -->
         <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/banner.js"></script>
     </head>
     <body>
          <!-- 1.头部 -->
@@ -38,7 +44,7 @@
                         <div class="hand-r fr">
                             <span><a href="">注册</a></span>
                             <i class="line"></i>
-                            <span><a href="" class="log">登录</a></span>
+                            <span><a href="html/login.html" class="log">登录</a></span>
                             <span class="sp">上午好，欢迎来新蛋购物</span>
                             <span><a href="" >我的订单</a></span>
                             <span class="hand-r5"><a href="">我的新蛋</a><i class="iconfont icon-arrow-down one"></i>
@@ -340,7 +346,29 @@
         <!-- 2.主轮播图部分 -->
         <main id="main">
             <div class="container clearfix">
-                <div class="main-l fl"></div>
+
+                <div class="main-l fl clearfix">                   
+                    <div class="kong fl"></div>
+                    <div class="mai-c fr">
+                        <div class="carousel"></div>
+                          
+                        <ul class="qiang clearfix">
+                            <li class="qiang1">限时抢购</li>
+                            <li class="qiang2"><span>剩余时间：</span><span id="countDown"></span></li>
+                            <li class="qiang3"><a href="#">更多抢购商品&gt;&gt;</a></li>
+                        </ul>
+                            
+                        <!-- 商品轮播 -->
+                        <div>
+                            
+                        </div>
+                    </div>                   
+                   
+                      
+                </div>
+            
+
+
                 <div class="main-r fr"></div>
             </div>
         </main>

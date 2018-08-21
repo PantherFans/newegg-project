@@ -86,9 +86,9 @@ header .top-t #daohang { width: 100%; background-color: #10286C; }
 
 header .top-t #daohang .container #top-b { height: 40px; width: 1200px; position: relative; margin-right: 10px; }
 
-header .top-t #daohang .container #top-b .lei { width: 179px; height: 40px; background-color: #FF6600; padding-left: 20px; position: relative; margin-right: 10px; }
+header .top-t #daohang .container #top-b .lei { width: 179px; height: 40px; position: absolute; left: -15px; top: 0; background-color: #FF6600; padding-left: 20px; position: relative; margin-right: 10px; }
 
-header .top-t #daohang .container #top-b .lei .zennbu { line-height: 40px; color: #fff; }
+header .top-t #daohang .container #top-b .lei .zennbu { line-height: 40px; color: #fff; width: 180px; height: 40px; margin-right: 30px; }
 
 header .top-t #daohang .container #top-b .lei:hover .lei-list { display: block; }
 
@@ -120,7 +120,7 @@ header .top-t #daohang .container #top-b .home .hov5 { width: 96px; }
 
 header .top-t #daohang .container #top-b .home .hov5:hover { background-color: #0036D9; }
 
-header .top-t #daohang .container #top-b .home-r { position: absolute; left: 935px; top: 0; background: #FF6600; width: 250px; }
+header .top-t #daohang .container #top-b .home-r { position: absolute; left: 955px; top: 0; background: #FF6600; width: 230px; }
 
 header .top-t #daohang .container #top-b .home-r .cart { position: relative; width: 113px; height: 40px; line-height: 40px; color: #fff; float: left; padding-left: 6px; border: 1px solid #FF6600; }
 
@@ -130,7 +130,7 @@ header .top-t #daohang .container #top-b .home-r .cang { position: relative; wid
 
 header .top-t #daohang .container #top-b .home-r .cang:hover { background: #fff; color: #FFB380; border-bottom: none; }
 
-header .top-t #daohang .container #top-b .home-r .cang .denglu { position: absolute; left: -139px; top: 39px; width: 251px; min-height: 88px; background: #fff; border-left: 1px solid #FF6600; border-bottom: 1px solid #FF6600; border-right: 1px solid #FF6600; padding: 5px 0; display: none; }
+header .top-t #daohang .container #top-b .home-r .cang .denglu { position: absolute; left: -118px; top: 39px; width: 230px; min-height: 88px; background: #fff; border-left: 1px solid #FF6600; border-bottom: 1px solid #FF6600; border-right: 1px solid #FF6600; padding: 5px 0; display: none; }
 
 header .top-t #daohang .container #top-b .home-r .cang .denglu p { color: #999; display: inline-block; margin-top: 20px; height: 28px; }
 
@@ -142,7 +142,7 @@ header .top-t #daohang .container #top-b .home-r .car-qty { color: #FFB380; font
 
 header .top-t #daohang .container #top-b .home-r .jian { margin-left: 5px; }
 
-header .top-t #daohang .container #top-b .home-r .car-pl { position: absolute; left: -1px; top: 39px; width: 251px; min-height: 88px; background: #fff; border-left: 1px solid #FF6600; border-bottom: 1px solid #FF6600; border-right: 1px solid #FF6600; padding: 5px 0; display: none; }
+header .top-t #daohang .container #top-b .home-r .car-pl { position: absolute; left: -1px; top: 39px; width: 230px; min-height: 88px; background: #fff; border-left: 1px solid #FF6600; border-bottom: 1px solid #FF6600; border-right: 1px solid #FF6600; padding: 5px 0; display: none; }
 
 header .top-t #daohang .container #top-b .home-r .car-pl p { color: #999; position: relative; padding: 5px; }
 
@@ -194,7 +194,21 @@ header .top-t #daohang .container #top-b .lei-list .lei-son0 p:first-child .co5 
 
 #main .container { width: 1200px; overflow: hidden; margin: 0 auto; padding: 0; }
 
-#main .container .main-l { width: 969px; height: 775px; background: #fc0; float: left; }
+#main .container .main-l { width: 969px; height: 775px; float: left; padding-top: 10px; }
+
+#main .container .main-l .kong { width: 190px; height: 472px; background: #fff; float: left; }
+
+#main .container .main-l .mai-c { width: 773px; height: 472px; }
+
+#main .container .main-l .mai-c .qiang { width: 773px; height: 40px; }
+
+#main .container .main-l .mai-c .qiang .qiang1, #main .container .main-l .mai-c .qiang .qiang2 { float: left; font-size: 18px; }
+
+#main .container .main-l .mai-c .qiang .qiang1 { width: 279px; height: 40px; line-height: 40px; color: #BF1313; font-weight: bold; }
+
+#main .container .main-l .mai-c .qiang .qiang2 { width: 235px; height: 40px; line-height: 40px; font-weight: bold; }
+
+#main .container .main-l .mai-c .qiang .qiang3 { float: right; width: 259px; height: 40px; line-height: 40px; font-size: 12px; font-weight: bold; text-align: right; }
 
 #main .container .main-r { width: 230px; height: 775px; background: #FFDFBF; float: right; }
 
