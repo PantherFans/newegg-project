@@ -1,0 +1,10 @@
+$mainColor:#FF6600; //橙色
+$hilightColor:lighten($mainColor,10%);
+$darkColor:darken($mainColor,10%);
+$fontSize:16px;
+$color:#10286C;  //蓝色
+
+
+//多值变量
+$pd:5px 10px 15px 20px;
+$headings:(h1: 2em, h2: 1.5em, h3: 1.2em);
