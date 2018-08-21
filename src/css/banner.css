@@ -1,4 +1,6 @@
+
 .lsh-carousel img{display: block;}
+
 .lsh-carousel{position:relative;width:773px;height:221px;overflow:hidden;}
 .lsh-carousel ul{position:relative;overflow:hidden;}
 
@@ -15,3 +17,118 @@
 .lsh-carousel .btn-next{left:auto;right:0;}
 .lsh-carousel > span:hover{background-color: rgba(255,0,0,0.8);}
 .lsh-carousel:hover > span{display: block;}
+
+
+
+.swiper-container{
+    width: 780px;
+    height: 188px;
+    padding-left:12px;
+    padding-right:12px;
+    position: relative;
+}
+ 
+
+   
+.swiper-slide {
+  text-align: center;
+  font-size: 12px;
+  
+ 
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.smbox{
+     width: 175px;
+    height: 183px;
+    background: #fff;
+   
+}
+
+.smbox img,h4{
+       
+    color:#666666;
+    font-family: tahoma,\5b8b\4f53!important;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #484848;
+}
+
+.smbox .orange{
+    color:#FF6600;
+    font-weight:bold;
+}
+
+
+
+
+
+/*第二个*/
+.swiper-container2{
+    width: 960px;
+    height: 239px;
+    padding-left:12px;
+    padding-right:12px;
+    position: relative;
+    overflow:hidden;
+}
+ 
+
+   
+.swiper-slide2 {
+  text-align: center;
+  font-size: 12px;
+  
+ 
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.smbox2{
+     width: 215px;
+    height: 239px;
+    background: #fff;
+   float:left;
+   margin-left:16px;
+}
+
+.smbox2 img,h4{
+       
+    color:#666666;
+    font-family: tahoma,\5b8b\4f53!important;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #484848;
+}
+
+.smbox2 .orange{
+    color:#FF6600;
+    font-weight:bold;
+}

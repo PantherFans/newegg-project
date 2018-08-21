@@ -130,7 +130,7 @@ header .top-t #daohang .container #top-b .home-r .cang { position: relative; wid
 
 header .top-t #daohang .container #top-b .home-r .cang:hover { background: #fff; color: #FFB380; border-bottom: none; }
 
-header .top-t #daohang .container #top-b .home-r .cang .denglu { position: absolute; left: -118px; top: 39px; width: 230px; min-height: 88px; background: #fff; border-left: 1px solid #FF6600; border-bottom: 1px solid #FF6600; border-right: 1px solid #FF6600; padding: 5px 0; display: none; }
+header .top-t #daohang .container #top-b .home-r .cang .denglu { position: absolute; left: -118px; top: 39px; width: 230px; min-height: 88px; background: #fff; border-left: 1px solid #FF6600; border-bottom: 1px solid #FF6600; border-right: 1px solid #FF6600; padding: 5px 0; display: none; z-index: 10000; }
 
 header .top-t #daohang .container #top-b .home-r .cang .denglu p { color: #999; display: inline-block; margin-top: 20px; height: 28px; }
 
@@ -142,7 +142,7 @@ header .top-t #daohang .container #top-b .home-r .car-qty { color: #FFB380; font
 
 header .top-t #daohang .container #top-b .home-r .jian { margin-left: 5px; }
 
-header .top-t #daohang .container #top-b .home-r .car-pl { position: absolute; left: -1px; top: 39px; width: 230px; min-height: 88px; background: #fff; border-left: 1px solid #FF6600; border-bottom: 1px solid #FF6600; border-right: 1px solid #FF6600; padding: 5px 0; display: none; }
+header .top-t #daohang .container #top-b .home-r .car-pl { position: absolute; left: -1px; top: 39px; width: 230px; min-height: 88px; background: #fff; border-left: 1px solid #FF6600; border-bottom: 1px solid #FF6600; border-right: 1px solid #FF6600; padding: 5px 0; display: none; z-index: 10000; }
 
 header .top-t #daohang .container #top-b .home-r .car-pl p { color: #999; position: relative; padding: 5px; }
 
@@ -190,17 +190,17 @@ header .top-t #daohang .container #top-b .lei-list .lei-son0 p:first-child .shen
 
 header .top-t #daohang .container #top-b .lei-list .lei-son0 p:first-child .co5 { font-size: 12px; color: #ccc; position: absolute; left: 132px; top: 0; }
 
-#main { width: 100%; height: 775px; background: #fff; }
+#main { width: 100%; height: 780px; background: #fff; }
 
 #main .container { width: 1200px; overflow: hidden; margin: 0 auto; padding: 0; }
 
-#main .container .main-l { width: 969px; height: 775px; float: left; padding-top: 10px; }
+#main .container .main-l { width: 969px; height: 780px; float: left; padding-top: 10px; }
 
-#main .container .main-l .kong { width: 190px; height: 472px; background: #fff; float: left; }
+#main .container .main-l .kong { width: 180px; height: 472px; background: #fff; float: left; }
 
-#main .container .main-l .mai-c { width: 773px; height: 472px; }
+#main .container .main-l .mai-c { width: 780px; height: 472px; }
 
-#main .container .main-l .mai-c .qiang { width: 773px; height: 40px; }
+#main .container .main-l .mai-c .qiang { width: 780px; height: 40px; }
 
 #main .container .main-l .mai-c .qiang .qiang1, #main .container .main-l .mai-c .qiang .qiang2 { float: left; font-size: 18px; }
 
@@ -210,9 +210,51 @@ header .top-t #daohang .container #top-b .lei-list .lei-son0 p:first-child .co5 
 
 #main .container .main-l .mai-c .qiang .qiang3 { float: right; width: 259px; height: 40px; line-height: 40px; font-size: 12px; font-weight: bold; text-align: right; }
 
-#main .container .main-r { width: 230px; height: 775px; background: #FFDFBF; float: right; }
+#main .container .main-l .hot { width: 960px; height: 295px; border: 1px solid #ccc; margin-left: -187px; overflow: hidden; }
+
+#main .container .main-l .hot .hot-t { height: 50px; border-bottom: 4px solid #FF6600; }
+
+#main .container .main-l .hot .hot-t h2 { font-size: 20px; color: #FF6600; margin-left: 10px; font-weight: bold; line-height: 50px; }
+
+#main .container .main-l .hot .hot-t h2 a { margin-left: 23px; }
+
+#main .container .main-l .hot .hot-t .cuxiao { float: right; font-weight: normal; font-size: 14px; color: #484848; }
+
+#main .container .main-r { width: 230px; height: 765px; float: right; padding-left: 2px; margin-top: 10px; }
+
+#main .container .main-r .xiaolun { width: 226px; height: 245px; margin-bottom: 10px; background: #FFDFBF; }
+
+#main .container .main-r .xiaotu { width: 230px; height: 220px; border: 1px solid #ccc; }
+
+#main .container .main-r .grey { width: 228px; height: 120px; border: 1px solid #ccc; background: #F6F6F6; margin-top: 16px; }
+
+#main .container .main-r .grey h4 { height: 35px; border-bottom: 1px dashed #ccc; padding-left: 10px; }
+
+#main .container .main-r .grey h4 span { font-size: 16px; font-weight: bold; line-height: 35px; }
+
+#main .container .main-r .grey h4 a { margin-left: 88px; }
+
+#main .container .main-r .grey p { margin-top: 10px; margin-left: 10px; }
+
+#main .container .main-r .xxl { width: 230px; height: 123px; margin-top: 16px; }
 
 #hprp { width: 100%; height: 637px; background: #ECECFB; }
+
+#hprp .container { margin: 0 auto; }
+
+#hprp .container .hot-b { height: 50px; width: 1200px; border-bottom: 4px solid #FF6600; margin-top: 10px; overflow: hidden; }
+
+#hprp .container .hot-b .hit { font-size: 20px; color: #FF6600; font-weight: bold; line-height: 50px; }
+
+#hprp .container .hot-b .cuxiao2 { float: right; font-weight: normal; font-size: 14px; color: #484848; }
+
+#hprp .container .hot-c { width: 1200px; height: 276px; }
+
+#hprp .container .hot-c .ej1 { width: 685px; height: 276px; padding-top: 30px; border: 1px solid #ccc; }
+
+#hprp .container .hot-c .ej1 .ear { float: left; width: 300px; height: 225px; }
+
+#hprp .container .hot-c .ej1 .wenben { float: right; width: 378px; height: 276px; }
 
 #httj { width: 100%; height: 547px; background: #DBDBEA; }
 

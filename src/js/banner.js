@@ -80,6 +80,22 @@ document.addEventListener('DOMContentLoaded',()=>{
 
         }
 
+        // 左右按钮
+        if(opt.button){
+            let btnPrev = document.createElement('span');
+            btnPrev.className = 'btn-prev';
+            btnPrev.innerHTML = '&lt;';
+
+            let btnNext = document.createElement('span');
+            btnNext.className = 'btn-next';
+            btnNext.innerHTML = '&gt;';
+
+            ele.appendChild(btnPrev);
+            ele.appendChild(btnNext);
+        }
+
+
+
         // 传递参数
         this.ul = ul;
         this.ele = ele;
@@ -98,6 +114,23 @@ document.addEventListener('DOMContentLoaded',()=>{
         ele.onmouseout = ()=>{
             this.timer = setInterval(this.autoPlay.bind(this),opt.duration);
         }
+
+        // 点击分页切换
+        ele.onclick = e=>{
+            if(e.target.parentNode.className === 'page'){
+                opt.index = e.target.innerText-1;
+
+                this.play();
+            }else if(e.target.className === 'btn-prev'){
+                opt.index--;
+                this.play();
+            }else if(e.target.className === 'btn-next'){
+                opt.index++;
+                this.play();
+            }
+        }
+
+
 
     }
 
@@ -151,7 +184,23 @@ document.addEventListener('DOMContentLoaded',()=>{
         new Carousel({
             ele:'.carousel',
             imgs:["img/pic1.jpg","img/pic2.jpg","img/pic3.jpg","img/pic4.jpg"]
-         })
+         });
+
+
+        new Carousel({
+            ele:'.xxl',
+            width:230,
+            height:123,
+            index:4,
+            page:false,
+            button:false,
+            type:'fade',
+            imgs:["img/xx1.jpg","img/xx2.jpg","img/xx3.jpg","img/xx4.jpg","img/xx5.jpg"]
+         });
+
+
+
+
 
 
         //倒计时!!!!!!!!!!
@@ -177,6 +226,71 @@ document.addEventListener('DOMContentLoaded',()=>{
                 
             });
         },1000);
+
+
+
+        var swiper = new Swiper('.swiper-container', {
+              slidesPerView: 4,
+              spaceBetween: 30,
+              slidesPerGroup: 4,
+              loop: true,
+              
+              loopFillGroupWithBlank: true,
+              pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    
+              },
+              navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                    autoplay : 1000,
+                    speed:100,
+              },
+    });
+
+
+
+
+
+    var swiper2 = new Swiper('.swiper-container2', {
+              slidesPerView: 4,
+              spaceBetween: 30,
+              slidesPerGroup: 4,
+              loop: true,
+              
+              loopFillGroupWithBlank: true,
+              pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    
+              },
+              navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                    autoplay : 1000,
+                    speed:100,
+              },
+    });
+
+
+    //右边小轮播图
+    Qfast.add('widgets', { path: "js/terminator2.2.min.js", type: "js", requires: ['fx'] });  
+    Qfast(false, 'widgets', function () {
+        K.tabs({
+            id: 'fsD1',   //焦点图包裹id  
+            conId: "D1pic1",  //** 大图域包裹id  
+            tabId:"D1fBt",  
+            tabTn:"a",
+            conCn: '.fcon', //** 大图域配置class       
+            auto: 1,   //自动播放 1或0
+            effect: 'horizontal',   //效果配置
+            eType: 'click', //** 鼠标事件
+            pageBt:true,//是否有按钮切换页码
+            bns: ['.prev', '.next'],//** 前后按钮配置class                          
+            interval: 3000  //** 停顿时间  
+        }) 
+    })  
     
 });
 

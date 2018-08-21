@@ -352,6 +352,7 @@ header{
                                     border-right:1px solid #FF6600;
                                     padding:5px 0;
                                     display:none;
+                                    z-index: 10000;
                                     p{
                                         color:#999;
                                         display:inline-block;
@@ -393,6 +394,7 @@ header{
                                     border-right:1px solid #FF6600;
                                     padding:5px 0;
                                     display:none;
+                                    z-index: 10000;
                                     p{
                                         color:#999;
                                         position:relative;
@@ -559,28 +561,28 @@ header{
 //2.主轮播图部分//
 #main{
     width:100%;
-    height:775px;
+    height:780px;
     background: #fff;
 
     .container{
         width:1200px;
         overflow:hidden;margin:0 auto;padding:0;
         .main-l{
-            width:969px;height: 775px;
+            width:969px;height: 780px;
             // background: #fc0;
             float:left;
             padding-top: 10px;
             .kong{
-                width: 190px;
+                width: 180px;
                 height: 472px;
                 background: #fff;
                 float:left;
             }
             .mai-c{
-                width: 773px;
+                width: 780px;
                 height: 472px;
                 .qiang{
-                    width: 773px;
+                    width: 780px;
                     height: 40px;
 
                     .qiang1,.qiang2{
@@ -610,12 +612,90 @@ header{
                         text-align:right;
                     }
                 }
+
+                
+            }
+            .hot{
+                width: 960px;
+                height: 295px;
+                border:1px solid #ccc;
+                margin-left:-187px;
+                overflow:hidden;
+                .hot-t{
+                    height: 50px;
+                    
+                    border-bottom:4px solid #FF6600;
+                    h2{
+                        font-size:20px;
+                        color:#FF6600;
+                        margin-left:10px;
+                        
+                        font-weight:bold;
+                        line-height:50px;
+                        a{
+                          margin-left:23px; 
+                        }
+                    }
+                    .cuxiao{
+                        float:right;
+                        font-weight:normal;
+                        font-size:14px;
+                        color:#484848;
+                    }
+                }
             }
         }
         .main-r{
-            width: 230px;height: 775px;
-            background: #FFDFBF;
+            width: 230px;height: 765px;
+            // background: #FFDFBF;
             float:right;
+            padding-left:2px;
+            margin-top:10px;
+            .xiaolun{
+                width:226px;
+                height: 245px;
+                
+                margin-bottom: 10px;
+                background: #FFDFBF;
+                
+            }
+            .xiaotu{
+                width: 230px;
+                height: 220px;
+                border:1px solid #ccc;
+            }
+
+            .grey{
+                width: 228px;
+                height: 120px;
+                border:1px solid #ccc;
+                background: #F6F6F6;
+                margin-top:16px;
+                h4{
+                    height: 35px;
+                    border-bottom:1px dashed #ccc;
+                    padding-left:10px;
+                    span{
+                        font-size:16px;
+                        font-weight:bold;
+                        line-height:35px;
+                    }
+                    a{
+                        margin-left:88px;
+                    }
+                }
+                p{
+                    margin-top:10px;
+                    margin-left:10px;
+                }
+            }
+
+            .xxl{
+                width: 230px;
+                height: 123px;
+                // border:1px solid #ccc;
+                margin-top:16px;
+            }
         }
     }
 }
@@ -630,6 +710,52 @@ header{
     width:100%;
     height:637px;
     background: #ECECFB;
+    .container{
+        margin:0 auto;
+       .hot-b{
+            height: 50px;
+            width:1200px;
+            border-bottom:4px solid #FF6600;
+            margin-top:10px;
+            overflow:hidden;
+            .hit{
+                font-size:20px;
+                color:#FF6600;
+                
+                font-weight:bold;
+                line-height:50px;
+                
+            }
+            .cuxiao2{
+                float:right;
+                font-weight:normal;
+                font-size:14px;
+                color:#484848;
+            }
+        } 
+        .hot-c{
+            width:1200px;
+            height: 276px;
+            .ej1{
+                width: 685px;
+                height: 276px;
+                padding-top:30px;
+                border:1px solid #ccc;
+                .ear{
+                    float:left;
+                    width: 300px;
+                    height: 225px;
+                }
+                .wenben{
+                    float:right;
+                    width: 378px;
+                    height: 276px;
+                }
+            }
+        }
+    }
+
+    
 }
 
 //4.海淘推荐
