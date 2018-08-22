@@ -209,7 +209,7 @@ header{
             }
 
         }
-        #daohang{
+        .daohang{
             width:100%;
             background-color:#10286C;
             .container{
@@ -581,6 +581,9 @@ header{
             .mai-c{
                 width: 780px;
                 height: 472px;
+                .carousel ul{
+                    height: 245px;
+                }
                 .qiang{
                     width: 780px;
                     height: 40px;
@@ -641,6 +644,7 @@ header{
                         font-weight:normal;
                         font-size:14px;
                         color:#484848;
+                        margin-right:255px;
                     }
                 }
             }
@@ -709,9 +713,9 @@ header{
 #hprp{
     width:100%;
     height:637px;
-    background: #ECECFB;
+    // background: #ECECFB;
     .container{
-        margin:0 auto;
+        margin:0 auto;padding:0;
        .hot-b{
             height: 50px;
             width:1200px;
@@ -736,33 +740,379 @@ header{
         .hot-c{
             width:1200px;
             height: 276px;
+            background: #fff;
+            border:1px solid #ccc;
+
             .ej1{
                 width: 685px;
                 height: 276px;
                 padding-top:30px;
-                border:1px solid #ccc;
+                // border-left:1px solid #ccc;
+                // border-right:1px solid #ccc;
+
                 .ear{
                     float:left;
-                    width: 300px;
-                    height: 225px;
+                    // width: 300px;
+                    // height: 225px;
+                    margin-left:15px;
                 }
                 .wenben{
                     float:right;
                     width: 378px;
                     height: 276px;
+                    h3{
+                        line-height:30px;
+                        margin-bottom:8px;
+                        .orange0{
+                            color:#FF6600;
+                            font-weight:bold;
+                            font-size:14px;
+                        }
+                    }
+                    p{
+                        font-size:12px;
+                        line-height: 20px;
+                        margin-right:25px;
+                    }
+                    .den{
+                        margin-top:25px;
+                    }
                 }
             }
+        }
+
+        //可能感兴趣产品
+        .xingqu{
+            width:1200px;
+            height:270px;
+            background: #fff;
+            border:1px solid #ccc;
+            margin-top:20px;
+            .product{
+                float:left;
+                width: 960px;
+                height: 270px;
+                border-right:1px solid #ccc;
+                .kedian{
+                    height: 30px;
+                    width: 960px;
+                    border-bottom:1px solid #ccc;
+                    display:flex;
+
+                    span{
+                        flex:1;
+                        width:240px;
+                        line-height:30px;
+                        text-align:center;
+                        border-right:1px solid #ccc;
+                        background: #F6F6F6;
+                        &:hover{
+                            color:#FF6600;
+                            &.active{
+                                background: #fff;
+                            }
+                        }
+                    }
+                    // .s1:hover .yexu{
+                    //     display:block;
+                    // }
+                    // .s2:hover .xinp{
+                    //     display:block;
+                    // }
+                    // .s3:hover .fashao{
+                    //     display:block;
+                    // }
+                    // .s4:hover .henhui{
+                    //     display:block;
+                    // }
+                    
+                }
+                .content{
+                    height: 239px;
+                    width: 957px;
+                    position:relative;
+                    overflow:hidden;
+                    .yexu{
+                        // display:flex;
+                        height: 239px;
+                        width: 956px;
+                        // background: #000;
+                        display:block;
+                        position:absolute;
+                        left:0;top:0;
+                        display:block;
+
+                        div{
+                            
+                            width: 188px;
+                            height: 239px;
+                            float:left;
+                            text-align:center;
+                            img{
+                                width: 179px;
+                                margin-top:10px;
+                            }
+                            h4{
+                                margin-bottom:10px;
+                               a{
+                                color:#666;
+                                font-size:12px;
+                                line-height: 20px;
+
+                               } 
+                            }
+                            .orange{
+                                color:#FF6600;
+                                font-weight:bold;
+                            }
+
+                        }
+                        
+                    }
+
+                    .xinp{
+                        // background: skyblue;
+                        display:block;
+                        height: 239px;
+                        width: 960px;
+                        position:absolute;
+                        left:0;top:0;
+                        display:none;
+                        div{
+                            
+                            width: 188px;
+                            height: 239px;
+                            float:left;
+                            text-align:center;
+                            img{
+                                width: 179px;
+                                margin-top:10px;
+                            }
+                            h4{
+                                margin-bottom:10px;
+                               a{
+                                color:#666;
+                                font-size:12px;
+                                line-height: 20px;
+
+                               } 
+                            }
+                            .orange{
+                                color:#FF6600;
+                                font-weight:bold;
+                            }
+
+                        }
+                    }
+
+                    .fashao{
+                        // background: orange;
+                        display:block;
+                        height: 239px;
+                        width: 960px;
+                        position:absolute;
+                        left:0;top:0;
+                        display:none;
+                        div{
+                            
+                            width: 188px;
+                            height: 239px;
+                            float:left;
+                            text-align:center;
+                            img{
+                                width: 179px;
+                                margin-top:10px;
+                            }
+                            h4{
+                                margin-bottom:10px;
+                               a{
+                                color:#666;
+                                font-size:12px;
+                                line-height: 20px;
+
+                               } 
+                            }
+                            .orange{
+                                color:#FF6600;
+                                font-weight:bold;
+                            }
+
+                        }
+                    }
+
+                    .henhui{
+                        // background: #58bc58;
+                        display:block;
+                        height: 239px;
+                        width: 960px;
+                        position:absolute;
+                        left:0;top:0;
+                        display:none;
+                        div{
+                            
+                            width: 188px;
+                            height: 239px;
+                            float:left;
+                            text-align:center;
+                            img{
+                                width: 179px;
+                                margin-top:10px;
+                            }
+                            h4{
+                                margin-bottom:10px;
+                               a{
+                                color:#666;
+                                font-size:12px;
+                                line-height: 20px;
+
+                               } 
+                            }
+                            .orange{
+                                color:#FF6600;
+                                font-weight:bold;
+                            }
+
+                        }
+                    }
+
+
+                }
+            }
+            .lutu{
+                float:right;
+                width: 280px;
+                height: 270px;
+                background:#fc0;
+                
+                ul{
+                    height: 268px;
+                    position:absolute;
+                    left:0;top:0;
+                }
+            }
+            
         }
     }
 
     
 }
 
+
+
+
+
+
 //4.海淘推荐
 #httj{
     width:100%;
     height:547px;
-    background: #DBDBEA;
+    // background: #DBDBEA;
+    .container{
+        margin:0 auto;padding:0;
+        width:1200px;
+        height: 522px;
+        .ht-l{
+            width: 959px;
+            height: 522px;
+            border:1px solid #ccc;
+            float:left;
+
+            
+            .haitao{
+                border-bottom:4px solid #2565BD;
+                .hai-t{
+                    font-size:20px;
+                    color:#2565BD;
+                    font-weight:bold;
+                    line-height:50px;
+                    
+                }
+            }
+
+            .haitao-c{
+                width: 959px;
+                height: 410px;
+                border-bottom:1px solid #ccc;
+                .ht1{
+                    width: 959px;
+                    height: 206px;
+                    ul{
+                        overflow:hidden;
+                        width: 959px;
+                        height: 206px;
+                        li{
+                            float:left;
+
+                        }
+                        .zuo{
+                            width: 232px;
+                            height: 206px;
+                            position:relative;
+                            .haiwai{
+                                position:absolute;
+                                left:25px;top:137px;
+                                background: url('../img/haiwai.png') no-repeat;
+                                width: 65px;
+                                height: 12px;
+                            }
+                            p{
+                                margin-left:25px;
+                                a{
+                                    margin-left:70px;
+                                }
+                                span{
+                                    color:#FF6600;
+                                    font-weight:bold;
+                                }
+                            }
+                        }
+                        .zhong{
+                            width: 481px;
+                            height: 206px;
+                            float:left;
+                            // background: #f00;
+                        }
+                        .you{
+                            width: 246px;
+                            height: 206px;
+                            position:relative;
+                            .haiwai2{
+                                position:absolute;
+                                left:25px;top:137px;
+                                background: url('../img/haiwai.png') no-repeat;
+                                width: 65px;
+                                height: 12px;
+                            }
+                             p{
+                                margin-left:25px;
+                                a{
+                                    margin-left:70px;
+                                }
+                                span{
+                                    color:#FF6600;
+                                    font-weight:bold;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                }
+            }
+
+            
+            
+        }
+
+        .ht-r{
+            width: 240px;
+            height: 505px;
+            // background: #fc0;
+            float:right;
+
+        }
+    }
+    
 }
 //
 //5.手机摄影

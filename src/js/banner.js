@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             index:0,
             page:true,//是否显示分页
             button:true,//是否显示左右按钮
-            type:'fade',//动画类型：vertical(垂直)，horizontal(水平),fade(淡入淡出)
+            type:'horizontal',//动画类型：vertical(垂直)，horizontal(水平),fade(淡入淡出)
             seamless:true,//是否无缝滚动,
             duration:3000,//轮播间隔时间
         }
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         var ele = document.querySelector(opt.ele);
 
         // 指定专有类型
-        ele.classList.add('lsh-carousel');
+        ele.classList.add('lx-carousel');
 
         // 设置样式（宽高）
         ele.style.width = opt.width + 'px';
@@ -181,10 +181,14 @@ document.addEventListener('DOMContentLoaded',()=>{
             clearInterval(this.timer);
         }
 
-        new Carousel({
-            ele:'.carousel',
-            imgs:["img/pic1.jpg","img/pic2.jpg","img/pic3.jpg","img/pic4.jpg"]
-         });
+        // new Carousel({
+        //     ele:'.carousel',
+        //     imgs:["img/pic1.jpg","img/pic2.jpg","img/pic3.jpg","img/pic4.jpg"],
+        //     width:771,
+        //     height:245,
+        //     // type:''
+
+        //  });
 
 
         new Carousel({
@@ -198,6 +202,19 @@ document.addEventListener('DOMContentLoaded',()=>{
             imgs:["img/xx1.jpg","img/xx2.jpg","img/xx3.jpg","img/xx4.jpg","img/xx5.jpg"]
          });
 
+          new Carousel({
+            ele:'.lutu',
+            width:238,
+            height:268,
+            index:3,
+            page:false,
+            button:false,
+            type:'horizontal',
+            imgs:["img/lutu1.jpg","img/lutu2.jpg","img/lutu3.jpg"]
+         });
+
+
+          
 
 
 
@@ -209,7 +226,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
         var date = new Date();
         // 1）指定结束时间
-        var end = '2018-9-25 15:28:50';
+        var end = '2018-10-25 23:59:59';
 
         // showTime();
         countDown.innerHTML = CountDown(end);
@@ -273,6 +290,15 @@ document.addEventListener('DOMContentLoaded',()=>{
               },
     });
 
+     var swiper3 = new Swiper('.bigbo', {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+
 
     //右边小轮播图
     Qfast.add('widgets', { path: "js/terminator2.2.min.js", type: "js", requires: ['fx'] });  
@@ -290,7 +316,35 @@ document.addEventListener('DOMContentLoaded',()=>{
             bns: ['.prev', '.next'],//** 前后按钮配置class                          
             interval: 3000  //** 停顿时间  
         }) 
-    })  
+    })
+
+
+
+    var product = document.querySelector('.product');
+    var items = product.querySelectorAll('.kedian span');
+    var contents = product.querySelectorAll('.content .cont');
+
+    for(var i=0;i<items.length;i++){
+        // (function(i){
+            items[i].onmouseover = (function(i){
+                // 把i限定到匿名函数所在作用域
+                return function(){
+                    for(var j=0;j<items.length;j++){
+                        // 清除其他，高亮当前
+                        items[j].className = '';
+                        //隐藏其他图片，显示当前图片
+                        contents[j].style.display = 'none';
+                    }
+
+                    items[i].className = 'active';
+                    contents[i].style.display = 'block';
+                }
+            })(i);
+        // })(i);
+    }
+
+
+
     
 });
 
