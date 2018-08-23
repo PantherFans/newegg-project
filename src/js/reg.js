@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded',()=>{
     let btnReg = document.querySelector('.btnReg');
     let no1 = document.querySelector('.no');
     let no2 = document.querySelector('.no2');
+    let no3 = document.querySelector('.no3');
+    let code = document.querySelector('#code');
+    let showCode = document.querySelector('.showcode');
 
     let status = [200,304];
 
@@ -12,8 +15,16 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     username.focus();
 
-    //注册
-    btnReg.onclick = ()=>{
+   
+
+
+       showCode.onclick = function(){
+            showCode.innerHTML = cs(0,9,4);
+          
+       }
+        showCode.innerHTML=cs(0,9,4); 
+
+        btnReg.onclick = ()=>{
         if(!isok){
             return false;
         }
@@ -21,6 +32,9 @@ document.addEventListener('DOMContentLoaded',()=>{
         //获取用户名/密码
         let _username = username.value;
         var _password = password.value;
+        var _code = code.value;
+        console.log(_code)
+             
 
         if(_username == ''){
             no1.innerText = '用户名不能为空！！！';
@@ -28,17 +42,24 @@ document.addEventListener('DOMContentLoaded',()=>{
 
             return;
         }else if(_password == ''){
-           no2.innerText = '密码不能为空';
+           no2.innerText = '密码不能为空！！！';
             password.focus();
             return;
         }
-        console.log(no1,no2);
+        else if(_code == ''){
+            no3.innerText = '验证码不能为空！！！';
+            code.focus();
+            return;
+        }
+        // showCode.innerHTML = getCode;
+        // console.log(getCode);
+
         
 
         let xhr = new XMLHttpRequest();
         xhr.onload = ()=>{
             if(status.indexOf(xhr.status) >= 0){
-                console.log(xhr.responseText);
+                console.log(xhr.responseText);location.href = '../html/login.html';
             }
         }
         xhr.open('post','../api/reg.php',true);
@@ -47,22 +68,23 @@ document.addEventListener('DOMContentLoaded',()=>{
         xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 
         xhr.send(`username=${_username}&password=${_password}`);
-        location.href = 'reg.html';
+        
     }
 
     //验证用户名是否存在
     username.onblur =()=>{
         let _username = username.value;
-
+  
         let xhr = new XMLHttpRequest();
 
-        if(_username = ''){
+        if(_username === ''){
             username.nextElementSibling.innerText = '用户名不能为空！！！';
             var cc =  username.nextElementSibling.innerText;
             console.log(cc);
             username.focus();
-            return
+            // return
         }
+        console.log(_username)
 
         password.onfocus =()=>{
             let _password = password.value;
@@ -76,6 +98,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         }
 
 
+
         xhr.onload = ()=>{
             if(status.indexOf(xhr.status) >= 0){
                 var formGroup = username.parentNode;
@@ -85,7 +108,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
                     //成功添加has-success类
                     formGroup.classList.remove('has-error');
-                    formGroup.classList.add('has-success');
+                    formGroup.classList.add('has-success','glyphicon-ok');
                     username.nextElementSibling.innerText = '';
                 }else if(xhr.responseText === 'no'){
                     isok = false;
@@ -96,6 +119,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                 }
             }
         }
+        console.log(_username)
         xhr.open('get','../api/check_username.php?username='+_username,true);
         xhr.send();
     } 

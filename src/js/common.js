@@ -57,6 +57,24 @@ function randomCode(num){
 
 // randomCode(4);
 
+
+//随机颜色验证码
+function cs(min,max,n){   
+     var code = '';
+    for(var i = 0; i<n;i++){
+        var r = parseInt(Math.random()*256);
+        var g = parseInt(Math.random()*256);
+        var b = parseInt(Math.random()*256);
+        var res = parseInt(Math.random()*(max-min+1)+min);
+        code+= '<span style="color:'+'rgb('+r+','+g+','+b+')'+'">'+res+'</span>' ;  
+    }
+    return code;//
+}
+
+
+
+
+
 /**
  * [关于元素节点的操作]
  * 	1.过滤非元素节点

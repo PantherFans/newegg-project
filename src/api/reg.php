@@ -20,6 +20,8 @@
     $conn->set_charset('utf8');
     var_dump($conn);
 
+    echo $username;
+
     // 执行sql语句
     $result = $conn->query($sql);
 
