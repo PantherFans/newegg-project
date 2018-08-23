@@ -32,12 +32,18 @@ body,h1,h2,h3,h4,p,a,input,img,ul,li,ol,dl,dt,dd{
         height:24px;
         span{
             margin-left:30px;
+            a{
+                color:#484848;
+            }
         }
     }
     .hand-r{
         float:right;
         width: 333px;
         height: 24px;
+         a{
+                color:#484848;
+            }
         span{
             margin-right:30px;
         }
@@ -66,7 +72,7 @@ body,h1,h2,h3,h4,p,a,input,img,ul,li,ol,dl,dt,dd{
                 background: #fff;
                 box-shadow: 0px 0px 1px #ccc, 2px 2px 1px #ccc;
                 position:absolute;
-                left:-77px;top:24px;
+                left:-63px;top:24px;
                 padding-left:15px;
                 display:none;
                 .in1{
@@ -105,6 +111,15 @@ body,h1,h2,h3,h4,p,a,input,img,ul,li,ol,dl,dt,dd{
     background: #F9F9F9;
     .container{
         width: 990px;
+        .form{
+            
+            // text-align:center;
+            font-size:12px;
+            width: 500px;
+            height: 370px;
+            margin:0 auto;
+
+        }
         p{
             line-height:30px;
             font-size:12px;
@@ -121,7 +136,7 @@ body,h1,h2,h3,h4,p,a,input,img,ul,li,ol,dl,dt,dd{
             text-align:center;
             font-size:20px;
             margin-top:20px;
-            margin-bottom:20px;
+            margin-bottom:40px;
             .yuan{
                 background: #E1E1E1;
                 width: 28px;
@@ -133,10 +148,7 @@ body,h1,h2,h3,h4,p,a,input,img,ul,li,ol,dl,dt,dd{
             }
         }
 
-        .inf{
-            margin-top:20px;
-            text-align:center;
-            font-size:12px;
+
             
             input{
                 height: 30px;
@@ -144,6 +156,7 @@ body,h1,h2,h3,h4,p,a,input,img,ul,li,ol,dl,dt,dd{
                 margin-bottom:25px;
                 background: #F9F9F9;
                 border:1px solid #D9D9D9;
+                color:#666;
             }
 
             .code{
@@ -152,25 +165,28 @@ body,h1,h2,h3,h4,p,a,input,img,ul,li,ol,dl,dt,dd{
             }
             .showcode{
                 display:inline-block;
-                width: 123px;
+                width: 133px;
                 height: 32px;
                 background: #EAD6D4;
                 border:none;
+                margin-bottom:20px;
+                border-radius:5px;
                 
             }
             button{
                 height: 30px;
-                width: 256px;
+               width: 130px;
                 background: #E1E1E1;
                 border:1px solid #ccc;
-                margin-left:74px;
+                margin-left:100px;
+                color:#484848;
             }
 
         }
     }
 
 
-}
+
 
 .dibu{
     width: 100%;

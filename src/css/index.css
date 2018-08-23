@@ -122,6 +122,10 @@ header .top-t .daohang .container #top-b .home .hov5:hover { background-color: #
 
 header .top-t .daohang .container #top-b .home-r { position: absolute; left: 955px; top: 0; background: #FF6600; width: 230px; }
 
+header .top-t .daohang .container #top-b .home-r .gouche { color: #fff; text-decoration: none; }
+
+header .top-t .daohang .container #top-b .home-r .gouche:hover { color: #FFB380; }
+
 header .top-t .daohang .container #top-b .home-r .cart { position: relative; width: 113px; height: 40px; line-height: 40px; color: #fff; float: left; padding-left: 6px; border: 1px solid #FF6600; }
 
 header .top-t .daohang .container #top-b .home-r .cart:hover { background: #fff; color: #FFB380; border-bottom: none; }
