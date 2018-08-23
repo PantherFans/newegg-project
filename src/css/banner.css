@@ -195,13 +195,7 @@ ul{list-style: none;padding:0;margin:0;}
 }
 
 
-.ht-r{
-        width: 240px;
-        height: 505px;
-        background: #fc0;
-        float:right;
 
-}
 
 .haitaob{
     width: 959px;
@@ -209,8 +203,7 @@ ul{list-style: none;padding:0;margin:0;}
     padding: 0;
     margin: 0;
     list-style: none;
-    border-bottom: 1px solid #ccc;
-    /*border-right: 1px solid #ccc;*/
+    
 }
 
 
@@ -220,10 +213,27 @@ ul{list-style: none;padding:0;margin:0;}
     
 }
 
-.hr-r .last1{
-    width: 230px;
-    height: 406px;
-    margin-left:10px;
-    background: #fff;
-    border:1px solid #ccc;
+.p1 li .miantu{
+    width: 96px;
+    height: 85px;
+    float:left;
 }
+.p1 li .zi{
+    float:right;
+    width: 133px;
+    height: 93px;
+}
+.p1 li .zi a{
+    font-size: 10px;
+    line-height: 18px;
+    color:#666;
+    display:inline-block;
+    margin-top: 16px;
+    margin-right: 8px;
+}
+.zi span{
+    color:#FF6600;
+    font-weight:bold;
+    background: #fff;
+}
+

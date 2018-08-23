@@ -202,6 +202,70 @@ document.addEventListener('DOMContentLoaded',()=>{
              });
 
 
+            new Carousel({
+                ele:'.zhong1',
+                width:480,
+                height:205,
+                index:2,
+                page:true,
+                button:false,
+                type:'horizontal',
+                imgs:["img/zg2.jpg","img/zg1.jpg"]
+             });
+
+
+
+            new Carousel({
+                ele:'.zhong2',
+                width:480,
+                height:205,
+                index:2,
+                page:true,
+                button:false,
+                type:'horizontal',
+                imgs:["img/zg1.jpg","img/zg2.jpg"]
+             });
+
+
+            new Carousel({
+                ele:'.zhong3',
+                width:480,
+                height:205,
+                index:2,
+                page:true,
+                button:false,
+                type:'horizontal',
+                imgs:["img/zg1.jpg","img/zg2.jpg"]
+             });
+
+
+            new Carousel({
+                ele:'.zhong4',
+                width:480,
+                height:205,
+                index:2,
+                page:true,
+                button:false,
+                type:'horizontal',
+                imgs:["img/zg2.jpg","img/zg1.jpg"]
+             });
+
+
+            new Carousel({
+                ele:'.xiaolun',
+                width:226,
+                height:241,
+                index:2,
+                page:true,
+                button:false,
+                type:'horizontal',
+                imgs:["img/zhadan1.jpg","img/zhadan2.jpg"]
+             });
+
+
+
+
+
              new Carousel({
                 ele:'.carousel',
                 width:771,
@@ -238,5 +302,5 @@ document.addEventListener('DOMContentLoaded',()=>{
             imgs:["img/lutu1.jpg","img/lutu2.jpg","img/lutu3.jpg"]
          });
 
-             
-        });
+
+ });

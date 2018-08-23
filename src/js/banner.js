@@ -191,27 +191,9 @@ document.addEventListener('DOMContentLoaded',()=>{
         //  });
 
 
-        new Carousel({
-            ele:'.xxl',
-            width:230,
-            height:123,
-            index:4,
-            page:false,
-            button:false,
-            type:'fade',
-            imgs:["img/xx1.jpg","img/xx2.jpg","img/xx3.jpg","img/xx4.jpg","img/xx5.jpg"]
-         });
+        
 
-          new Carousel({
-            ele:'.lutu',
-            width:238,
-            height:268,
-            index:3,
-            page:false,
-            button:false,
-            type:'horizontal',
-            imgs:["img/lutu1.jpg","img/lutu2.jpg","img/lutu3.jpg"]
-         });
+          
 
 
           

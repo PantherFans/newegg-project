@@ -328,15 +328,15 @@ header .top-t .daohang .container #top-b .lei-list .lei-son0 p:first-child .co5 
 
 #hprp .container .xingqu .product .content .henhui div .orange { color: #FF6600; font-weight: bold; }
 
-#hprp .container .xingqu .lutu { float: right; width: 280px; height: 270px; background: #fc0; }
+#hprp .container .xingqu .lutu { float: right; width: 238px; height: 270px; }
 
-#hprp .container .xingqu .lutu ul { height: 268px; position: absolute; left: 0; top: 0; }
+#hprp .container .xingqu .lutu ul { height: 268px; }
 
 #httj { width: 100%; height: 547px; }
 
-#httj .container { margin: 0 auto; padding: 0; width: 1200px; }
+#httj .container { margin: 0 auto; padding: 0; width: 1200px; height: 522px; }
 
-#httj .container .ht-l { width: 959px; height: 505px; border: 1px solid #ccc; float: left; }
+#httj .container .ht-l { width: 959px; height: 522px; border: 1px solid #ccc; float: left; }
 
 #httj .container .ht-l .haitao { border-bottom: 4px solid #2565BD; }
 
@@ -372,15 +372,23 @@ header .top-t .daohang .container #top-b .lei-list .lei-son0 p:first-child .co5 
 
 #httj .container .ht-l .haitao-c .ht1 ul .you p span { color: #FF6600; font-weight: bold; }
 
-#httj .container .ht-l .haitao-c .ht2 { width: 959px; height: 204px; }
+#httj .ht-r { width: 240px; height: 505px; float: right; }
 
-#httj .container .ht-l .haitao-c .ht2 ul { width: 959px; height: 204px; }
+#httj .ht-r .last1 { width: 230px; height: 406px; margin-left: 10px; background: #fff; border: 1px solid #ccc; padding-top: 5px; }
 
-#httj .container .ht-l .haitao-c .ht2 ul li { float: left; }
+#httj .ht-r .last1 .mo { display: inline-block; width: 55px; height: 28px; background: #E9E9E9; border-right: 1px solid #fff; font-size: 8px; line-height: 28px; text-align: center; cursor: pointer; }
 
-#httj .container .ht-l .haitao-b { width: 959px; height: 50px; }
+#httj .ht-r .last1 .tit1 { width: 50px; height: 28px; }
 
-#httj .container .ht-r { width: 240px; height: 505px;  float: right; }
+#httj .ht-r .content2 { width: 229px; height: 370px; }
+
+#httj .ht-r .content2 ul { width: 229px; height: 370px; }
+
+#httj .ht-r .content2 ul li { width: 229px; height: 93px; border-bottom: 1px solid #ccc; }
+
+#httj .ht-r .content2 ul li:nth-child(4) { border: none; }
+
+#httj .ht-r .last2 { width: 230px; height: 50px; margin-left: 10px; margin-top: 10px; }
 
 #sjsy { width: 100%; height: 503px; background: #CACAD9; }
 

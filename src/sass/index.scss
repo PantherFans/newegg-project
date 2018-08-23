@@ -788,6 +788,7 @@ header{
             background: #fff;
             border:1px solid #ccc;
             margin-top:20px;
+            // position:relative;
             .product{
                 float:left;
                 width: 960px;
@@ -813,18 +814,7 @@ header{
                             }
                         }
                     }
-                    // .s1:hover .yexu{
-                    //     display:block;
-                    // }
-                    // .s2:hover .xinp{
-                    //     display:block;
-                    // }
-                    // .s3:hover .fashao{
-                    //     display:block;
-                    // }
-                    // .s4:hover .henhui{
-                    //     display:block;
-                    // }
+                    
                     
                 }
                 .content{
@@ -980,14 +970,14 @@ header{
             }
             .lutu{
                 float:right;
-                width: 280px;
+                width: 238px;
                 height: 270px;
-                background:#fc0;
                 
+                // position:absolute;
+                // left:0;top:0;
                 ul{
                     height: 268px;
-                    position:absolute;
-                    left:0;top:0;
+                    
                 }
             }
             
@@ -1107,11 +1097,58 @@ header{
         .ht-r{
             width: 240px;
             height: 505px;
-            // background: #fc0;
             float:right;
+                .last1{
+                    width: 230px;
+                    height: 406px;
+                    margin-left:10px;
+                    background: #fff;
+                    border:1px solid #ccc;
+                    padding-top:5px;
+                    .mo{
+                        display:inline-block;
+                        width: 55px;
+                        height: 28px;
+                        background: #E9E9E9;
+                        border-right:1px solid #fff;
+                        font-size:8px;
+                        line-height:28px;
+                        text-align:center;
+                        cursor: pointer;
+                    }
+                    .tit1{
+                        width: 50px;
+                        height: 28px;
 
+                    }
+                    
+                }
+
+                .content2{
+                    width: 229px;
+                    height: 370px;
+                    ul{
+                        width: 229px;
+                        height: 370px;
+                        li{
+                            width: 229px;
+                            height: 93px;
+                            border-bottom:1px solid #ccc;
+                            &:nth-child(4){
+                                border:none;
+                                
+                            }
+                        }
+                    }
+                }
+
+                .last2{
+                    width: 230px;
+                    height: 50px;
+                    margin-left:10px;
+                    margin-top:10px;
+                }
         }
-    }
     
 }
 //
