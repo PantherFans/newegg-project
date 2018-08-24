@@ -97,7 +97,7 @@ body,h1,h2,h3,h4,p,a,input,img,ul,li,ol,dl,dt,dd{
         h1{
             float:left;
             font-size:26px;            
-            line-height:108px;
+            line-height:64px;
             margin-left:26px;
             font-weight:normal;
         }
@@ -158,6 +158,24 @@ body,h1,h2,h3,h4,p,a,input,img,ul,li,ol,dl,dt,dd{
                 border:1px solid #D9D9D9;
                 color:#666;
             }
+            .dadui{
+                position:relative;
+                .dui{
+                    position:absolute;
+                    left:285px;top:0px;
+                    width: 30px;height: 30px;
+                    background: url('../img/dui.png') no-repeat;
+                    display:none;
+                }
+                .cuo{
+                    position:absolute;
+                    left:285px;top:0px;
+                    width: 30px;height: 30px;
+                    background: url('../img/cuo.png') no-repeat;
+                    display:none;
+                }
+            }
+            
 
             .code{
                 width: 130px;

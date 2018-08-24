@@ -2,11 +2,14 @@ document.addEventListener('DOMContentLoaded',()=>{
     let username = document.querySelector('#username');
     let password = document.querySelector('#password');
     let btnReg = document.querySelector('.btnReg');
-    let no1 = document.querySelector('.no');
+    let no = document.querySelector('.no');
     let no2 = document.querySelector('.no2');
     let no3 = document.querySelector('.no3');
     let code = document.querySelector('#code');
     let showCode = document.querySelector('.showcode');
+    let dui = document.querySelector('.dui');
+    let cuo = document.querySelector('.cuo');
+    let form = document.querySelector('.form');
 
     let status = [200,304];
 
@@ -15,46 +18,105 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     username.focus();
 
+
+        var sc = cs(0,9,4);
+
+       showCode.onclick = function(){
+            sc = cs(0,9,4);
+            showCode.innerHTML = sc[0];
+          
+       }
    
 
 
-       showCode.onclick = function(){
-            showCode.innerHTML = cs(0,9,4);
+      
+   
+        // console.log( typeof(res))
+        
+             
+        showCode.innerHTML= sc[0];
+        var aa= showCode.innerHTML;
+        console.log(aa)
+
+        code.onfocus = function(){
+             var timest = setInterval(function yzm(){
+                     var _code = code.value;
+                    
+                    if(_code ==Number(sc[1])){
+                        dui.style.display = 'block';
+                        cuo.style.display = 'none';
+                        clearInterval(timest)
+                        console.log(_code)
+                          return;    
+                        
+                    }else{
+                        cuo.style.display = 'block';
+                        dui.style.display = 'none';
+                        console.log(_code)
+                        
+                         return;
+                    }
+                    // console.log(res);
+                },3000);
+        }
+
+       // code.onclick =function(){ console.log('kkk')
           
-       }
-        showCode.innerHTML=cs(0,9,4); 
+      
+              
+          
+
+                
+       //       };  
+        
+        //获取用户名/密码
+        onkeyup = function(e){
+
+            var key = e.keyCode || e.which; 
+            console.log('use');
+            let _username = username.value;
+            var _password = password.value;
+            var _code = code.value;
+         
+                 
+
+            if(_username == ''){
+                no.innerText = '用户名不能为空！！！';
+                username.focus();
+
+                return;
+            }else if(_password == ''){
+               no2.innerText = '密码不能为空！！！';
+                // password.focus();
+                return;
+            }
+           
+            
+            if(!/^[a-z][a-z0-9_\-]{5,19}$/i.test(_username)){
+              
+                no.innerHTML = '用户名不合法';
+
+                return false;
+            }
+            // let password = document.querySelector('#password').value;
+            if(!/^[^\s]{6,20}$/i.test(_password)){
+                no2.innerHTML = '密码不合法';
+                return false;
+            }
+        }
+        
+        
+
+        // console.log(res)
 
         btnReg.onclick = ()=>{
         if(!isok){
             return false;
         }
 
-        //获取用户名/密码
+        
         let _username = username.value;
         var _password = password.value;
-        var _code = code.value;
-        console.log(_code)
-             
-
-        if(_username == ''){
-            no1.innerText = '用户名不能为空！！！';
-            username.focus();
-
-            return;
-        }else if(_password == ''){
-           no2.innerText = '密码不能为空！！！';
-            password.focus();
-            return;
-        }
-        else if(_code == ''){
-            no3.innerText = '验证码不能为空！！！';
-            code.focus();
-            return;
-        }
-        // showCode.innerHTML = getCode;
-        // console.log(getCode);
-
-        
 
         let xhr = new XMLHttpRequest();
         xhr.onload = ()=>{
@@ -77,25 +139,25 @@ document.addEventListener('DOMContentLoaded',()=>{
   
         let xhr = new XMLHttpRequest();
 
-        if(_username === ''){
-            username.nextElementSibling.innerText = '用户名不能为空！！！';
-            var cc =  username.nextElementSibling.innerText;
-            console.log(cc);
-            username.focus();
-            // return
-        }
-        console.log(_username)
+        // if(_username === ''){
+        //     username.nextElementSibling.innerText = '用户名不能为空！！！';
+        //     var cc =  username.nextElementSibling.innerText;
+        //     console.log(cc);
+        //     username.focus();
+        //     // return
+        // }
+        // console.log(_username)
 
-        password.onfocus =()=>{
-            let _password = password.value;
-            if(_password == ''){
-                password.nextElementSibling.innerText = '密码不能为空!!!';
-                password.focus();
-                return;
-            }else{
-                password.nextElementSibling.innerText = '';
-            }
-        }
+        // password.onfocus =()=>{
+        //     let _password = password.value;
+        //     if(_password == ''){
+        //         password.nextElementSibling.innerText = '密码不能为空!!!';
+        //         // password.focus();
+        //         return;
+                
+        //     }
+        //      username.nextElementSibling.innerText = '';
+        // }
 
 
 
@@ -108,7 +170,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
                     //成功添加has-success类
                     formGroup.classList.remove('has-error');
-                    formGroup.classList.add('has-success','glyphicon-ok');
+                    formGroup.classList.add('has-success');
                     username.nextElementSibling.innerText = '';
                 }else if(xhr.responseText === 'no'){
                     isok = false;
@@ -116,7 +178,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                     formGroup.classList.add('has-error');
                     username.nextElementSibling.innerText = '用户名已存在';
                     username.focus();
-                }
+                } 
             }
         }
         console.log(_username)

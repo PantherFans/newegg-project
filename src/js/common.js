@@ -59,17 +59,20 @@ function randomCode(num){
 
 
 //随机颜色验证码
-function cs(min,max,n){   
+ function cs(min,max,n){   
      var code = '';
+     var mima='';
     for(var i = 0; i<n;i++){
         var r = parseInt(Math.random()*256);
         var g = parseInt(Math.random()*256);
         var b = parseInt(Math.random()*256);
         var res = parseInt(Math.random()*(max-min+1)+min);
+        mima +=res;
         code+= '<span style="color:'+'rgb('+r+','+g+','+b+')'+'">'+res+'</span>' ;  
     }
-    return code;//
+    return [code,mima];
 }
+
 
 
 
