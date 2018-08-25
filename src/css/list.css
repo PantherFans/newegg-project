@@ -1,0 +1,196 @@
+/**{margin:0 auto;padding:0;}*/
+.container{
+    margin:0 auto;
+    padding:0;
+}
+
+.huise{
+    width: 100%;
+    height: 30px;
+    background: #F0F0F0;
+    margin-bottom: 6px;
+}
+.huise p{
+    line-height: 30px;
+    color:#666;
+}
+
+.huise p a{
+    margin-left:5px;
+}
+
+.main{
+    width: 100%;
+    min-height: 2000px;
+}
+.main .container{
+    margin:0 auto;
+    padding:0;
+}
+
+.main .lie_l{
+    width: 178px;
+    min-height: 2000px;
+    margin-right: 10px;
+    background:skyblue;
+    float:left;
+}
+
+
+
+/*右边商品列表*/
+.main .lie_r{
+    width: 1010px;
+    min-height: 2000px;
+    /*background:skyblue;*/
+    float:right;
+}
+
+
+
+.zx{
+    width: 1010px;
+    height: 60px;
+    border:1px solid #ccc;
+    padding-left: 10px;
+    padding-top: 8px;
+    background: #fff;
+}
+
+.zx p{
+    font-size: 14px;
+    color:#006CC2;
+    line-height: 26px;
+}
+
+.zx p span{
+    font-weight: bold;
+    text-align: left;
+}
+.zx p .geng{
+    float:right;
+    margin-right: 10px;
+}
+
+.zx ul{
+    height: 35px;
+    width: 999px;
+    overflow: hidden;
+}
+
+.zx ul li{
+    float:left;
+    list-style: disc;
+    margin-right: 30px;
+}
+.zx ul a{
+    color:#FF6600;
+    font-size: 10px;
+
+}
+
+.pro-total{
+    width:1010px;
+    height: 210px;
+    border:1px solid #ccc;
+    margin-top: 10px;
+}
+
+.pro-total .gongji{
+    width: 1008px;
+    height: 31px;
+    border-bottom: 1px solid #ccc;
+    background: #EDF3FA;
+}
+.gongji p{
+    font-size: 14px;
+    margin-left: 20px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+
+
+
+
+
+
+.pro-total .pinpai{
+    width: 1010px;
+    height: 59px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 50px;
+}
+.pinpai p{
+    line-height: 28px;
+}
+
+.pinpai a{
+    margin-right: 20px;
+}
+
+.pinpai .pin1 span{
+     font-size: 14px;
+     font-weight: bold;
+     margin-right: 20px;
+}
+
+.pin2 .mic{
+    margin-left: 65px;
+}
+
+
+
+
+.pro-total .pri{
+    width: 1010px;
+    height: 45px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 50px;
+    line-height: 45px;
+}
+
+.pri span{
+    font-size: 14px;
+     font-weight: bold;
+     margin-right: 20px;
+}
+.pri a{
+    margin-right: 20px;
+}
+
+
+
+
+.pro-total .leixing{
+    width: 1010px;
+    height: 38px;
+    border-bottom: 1px solid #ccc;
+}
+
+.pro-total .more{
+    width: 1008px;
+    height: 35px;
+    background: #EDF3FA;
+
+}
+
+.more{
+    padding-left: 50px;
+    line-height: 35px;
+}
+
+.more span{
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+
+
+.pro-total .paixu{
+    width: 1010px;
+    height: 117px;
+    border:1px solid #ccc;
+    margin-top: 10px;
+}
