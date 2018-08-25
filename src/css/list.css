@@ -32,9 +32,30 @@
     width: 178px;
     min-height: 2000px;
     margin-right: 10px;
-    background:skyblue;
+    /*background:skyblue;*/
     float:left;
 }
+.main .lie_l .zhengji{
+    color:#845400;
+    font-size: 14px;
+    margin-left: 10px;
+} 
+
+.main .lie_l .pad li{
+    list-style:disc;
+    margin-left: 10px;
+}
+
+.main .lie_l .panel-group{
+    width: 179px;
+    height: 143px;
+   
+}
+
+
+
+
+
 
 
 
@@ -166,7 +187,18 @@
     width: 1010px;
     height: 38px;
     border-bottom: 1px solid #ccc;
+    padding-left: 50px;
+    line-height: 38px;
 }
+.leixing span{
+    font-size: 14px;
+     font-weight: bold;
+     margin-right: 20px;
+}
+.leixing a{
+    margin-right: 20px;
+}
+
 
 .pro-total .more{
     width: 1008px;
@@ -176,14 +208,54 @@
 }
 
 .more{
-    padding-left: 50px;
-    line-height: 35px;
+    /*padding-left: 50px;*/
+    /*line-height: 35px;*/
+    padding-left: 25px;
+
+
 }
 
-.more span{
+.more .rad{
     font-size: 14px;
     font-weight: bold;
     margin-right: 20px;
+    line-height: 35px;
+}
+.more ul{
+    display:inline-block;
+}
+
+.more ul li{
+    float:left;
+
+}
+.more li{
+    margin-right:12px;
+    text-align: center;
+}
+.more li:not(.rad){
+    margin-top: 5px;
+}
+
+.more .two{
+    width: 47px;
+    height: 25px;
+    background: #fff;
+    border:1px solid #ccc;
+}
+
+.more .three{
+    width: 120px;
+    height: 25px;
+    background: #fff;
+    border:1px solid #ccc;
+}
+
+.more .four{
+    width: 72px;
+    height: 25px;
+    background: #fff;
+    border:1px solid #ccc;
 }
 
 
@@ -192,5 +264,65 @@
     width: 1010px;
     height: 117px;
     border:1px solid #ccc;
+    margin-top: 10px;
+}
+
+.fenye{
+    width: 1010px;
+    height: 35px;
+    padding-left:25px ;
+    margin-top:10px;
+
+}
+
+.fenye a{
+    display:inline-block;
+    width: 63px;
+    height: 24px;
+    border:1px solid #ccc;
+    margin-right: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.fenye ins{
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.goodslist{
+    margin-left: 12px;
+    margin-top:15px;
+    width: 1009px;
+    min-height: 700px;
+}
+
+.goodslist li{
+    float:left;
+    width: 250px;
+    height: 354px;
+    padding-right: 40px;
+}
+.goodslist li img{
+    cursor:pointer;
+}
+
+
+.goodslist .name{
+    color:#666666;
+    line-height: 25px;
+    margin-top: 30px;
+    cursor:pointer;
+}
+
+.goodslist .qty{
+    font-weight: bold;
+    margin-top: 10px;
+
+}
+
+.goodslist .jiage{
+    color:#FF6600;
+    font-weight: bold;
     margin-top: 10px;
 }

@@ -159,7 +159,8 @@ document.addEventListener('DOMContentLoaded',()=>{
         //      username.nextElementSibling.innerText = '';
         // }
 
-
+       
+        console.log( xhr.responseText)
 
         xhr.onload = ()=>{
             if(status.indexOf(xhr.status) >= 0){
@@ -178,6 +179,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                     formGroup.classList.add('has-error');
                     username.nextElementSibling.innerText = '用户名已存在';
                     username.focus();
+                    console.log(xhr.responseText)
                 } 
             }
         }

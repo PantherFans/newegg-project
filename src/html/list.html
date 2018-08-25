@@ -11,10 +11,16 @@
         <link rel="stylesheet" href="../css/public.css" />
         <link rel="stylesheet" href="../font/iconfont.css" />
         <link rel="stylesheet" type="text/css" href="../css/list.css" />
+
+        <!-- <link rel="stylesheet" href="../lib/bootstrap/3.3.7-dist/css/bootstrap.min.css"> -->
+        <script src="../lib/jquery-2.1.1/jquery.min.js"></script>
+        <!-- <script src="../lib/bootstrap/3.3.7-dist/js/bootstrap.min.js"></script> -->
         <!-- 第1步：引入jquery -->
-        <script src="../js/jquery-3.2.1.js"></script>
+        <!-- <script src="../js/jquery-3.2.1.js"></script> -->
         <!-- 第2步：引入插件 -->
         <script src="../lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+
+        <script src="../js/list.js"></script>
     </head>
     <body>
          <!-- 1.头部 -->
@@ -37,14 +43,14 @@
                         </li>
                         
                         <div class="hand-r fr">
-                            <span><a href="">注册</a></span>
+                            <span><a href="reg.html">注册</a></span>
                             <i class="line"></i>
-                            <span><a href="" class="log">登录</a></span>
+                            <span><a href="login.html" class="log">登录</a></span>
                             <span class="sp">上午好，欢迎来新蛋购物</span>
                             <span><a href="" >我的订单</a></span>
                             <span class="hand-r5"><a href="">我的新蛋</a><i class="iconfont icon-arrow-down one"></i>
                             <ul class="hand-r51">
-                               <li>请<a href="#">登录</a>后查看</li> 
+                               <li>请<a href="login.html">登录</a>后查看</li> 
                             </ul>
                             </span>
                             <span><a href="" class="cen">帮助中心</a></span>
@@ -352,7 +358,48 @@
         <main class="main">
             <div class="container">
                 <div class="lie_l fl">
-                    
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a class="zhengji" data-toggle="collapse" data-parent="#accordion" 
+                                 href="#collapseOne">
+                                电脑整机
+                              </a>
+                            </h4>
+                          </div>
+                          <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                               <ul class="pad">
+                                  <li>笔记本电脑</li>
+                                  <li>平板配件</li>
+                                  <li>平板</li>
+                               </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" 
+                                 href="#collapseTwo">
+                                平板配件
+                              </a>
+                            </h4>
+                          </div>
+                          <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                              <ul class="pad">
+                                  <li>笔记本电脑</li>
+                                  <li>平板配件</li>
+                                  <li>平板</li>
+                               </ul>
+                            </div>
+                          </div>
+                        </div>
+                       
+                      </div>
+
                 </div>
 
                 <div class="lie_r fr">
@@ -413,20 +460,27 @@
                             <a href="list.html">商务办公本(60)</a>
                         </div>
                         <div class="more">
-                            <span>更多选项</span>
                             <ul>
-                                <li><a href="#">平台</a></li>
-                                <li><a href="#">尺寸</a></li>
-                                <li><a href="#">显卡</a></li>
-                                <li><a href="#">内存容量</a></li>
-                                <li><a href="#">硬盘容量</a></li>
-                                <li><a href="#">重量</a></li>
-                                <li><a href="#">操作系统</a></li>
+                                <li class="rad">更多选项</li>
+                                <li id="qty" class="two"><a href="#">销量</a></li>
+                                <li id="d_price" class="three"><a href="#">价格：从低到高</a></li>
+                                <li id="u_price" class="four"><a href="#">从高到低</a></li>
+                                <li id="date" class="four"><a href="#">上架时间</a></li>
+                               
                             </ul>
                         </div>
+
+
+                    </div>
+                    <div class="fenye">
+                        <a href="#" class="prev"><span>上一页</span></a>
+                        <ins>1/5</ins>
+                        <a href="#" class="next"><span>下一页</span></a>
                     </div>
 
-                    <div class="paixu"></div>
+                    <div class="goodslist">
+                        <ul></ul>
+                    </div>
                 </div>
             </div>
         </main>
