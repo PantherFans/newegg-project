@@ -242,6 +242,7 @@
     height: 25px;
     background: #fff;
     border:1px solid #ccc;
+    cursor:pointer;
 }
 
 .more .three{
@@ -249,6 +250,7 @@
     height: 25px;
     background: #fff;
     border:1px solid #ccc;
+    cursor:pointer;
 }
 
 .more .four{
@@ -256,6 +258,7 @@
     height: 25px;
     background: #fff;
     border:1px solid #ccc;
+    cursor:pointer;
 }
 
 

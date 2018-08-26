@@ -69,6 +69,7 @@
     height: 492px;
     border-right: 1px solid #ccc;
     float:left;
+    margin-top: 20px;
 }
 /*.cpb .cpb_l p{
     font-size: 12px;
@@ -304,4 +305,5 @@
     margin-top: 20px;
     width: 1000px;
 }
+
 

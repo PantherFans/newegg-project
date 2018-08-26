@@ -12,14 +12,18 @@
         <link rel="stylesheet" href="../font/iconfont.css" />
         <link rel="stylesheet" href="../css/detail.css" />
 
-        <link rel="stylesheet" type="text/css" href="../css/zzsc.css">
+        <link href="../css/css.css" type="text/css" rel="stylesheet">
         <!-- 第1步：引入jquery -->
         <script src="../js/jquery-3.2.1.js"></script>
         <!-- 第2步：引入插件 -->
         <script src="../lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-        <script type="text/javascript" class="library" src="../js/jquery-1.8.2.min.js"></script>
-        <script type="text/javascript" class="library" src="../js/jquery.colorbox-min.js"></script>
-        <script type="text/javascript" class="library" src="../js/zzsc.js"></script>
+        <!-- <script type="text/javascript" class="library" src="../js/jquery-1.8.2.min.js"></script> -->
+        
+        
+        <script src="../js/zoomjs/jquery-1.2.6.pack.js"></script>
+        <script src="../js/zoomjs/base.js"></script>
+        <script src="../js/goodsdetail.js"></script>
+        
     </head>
     <body>
          <!-- 1.头部 -->
@@ -348,31 +352,90 @@
             <div class="container">
                 <!-- 详情页放大镜 -->
                 <div class="chanpin">
-                    <div class="con-FangDa cp_l fl" id="fangdajing">
-                        <div class="con-fangDaIMg da">
-                           <!-- 正常显示的图片-->
-                            <img src="../img/da_cp1.jpg">
-                            <!-- 滑块-->  
-                            <div class="magnifyingBegin"></div>
-                            <!-- 放大镜显示的图片 -->
-                            <div class="magnifyingShow"><img src="../img/da_cp01.jpg"></div> 
+                  <div id="preview">
+                      <div class=jqzoom id=spec-n1 onClick="window.open('http://sc.chinaz.com/')"><IMG height=350
+                      src="../img/da_cp4.jpg" jqimg="../img/da_cp4.jpg" width=350>
+                      </div>
+                      <div id="spec-n5">
+                        <div class="control" id="spec-left">
+                          <img src="../img/left.gif" />
                         </div>
+                        <div id="spec-list">
+                          <ul class="list-h">
+                            <li ><img class="dacp"> </li>
+                                <!-- "../img/da_cp1.jpg" -->
+                            <li><img src="../img/da_cp2.jpg"> </li>
+                            <li><img src="../img/da_cp3.jpg"> </li>
+                            <li><img src="../img/da_cp4.jpg"> </li>
+                            
+                            <!-- "../img/da_cp1.jpg" -->
+                            <li><img src="../img/da_cp2.jpg"> </li>
+                            <li><img src="../img/da_cp3.jpg"> </li>
+                            <li><img src="../img/da_cp4.jpg"> </li>
+                            
+                            <!-- "../img/da_cp1.jpg" -->
+                            <li><img src="../img/da_cp2.jpg"> </li>
+                            <li><img src="../img/da_cp3.jpg"> </li>
+                            <li><img src="../img/da_cp4.jpg"> </li>
+                          </ul>
+                        </div>
+                        <div class="control" id="spec-right">
+                          <img src="../img/right.gif" />
+                        </div>
+                        
+                        </div>
+                        
+                        <SCRIPT type=text/javascript>
+                          $(function(){     
+                             $(".jqzoom").jqueryzoom({
+                              xzoom:400,
+                              yzoom:400,
+                              offset:10,
+                              position:"right",
+                              preload:1,
+                              lens:1
+                            });
+                            $("#spec-list").jdMarquee({
+                              deriction:"left",
+                              width:350,
+                              height:56,
+                              step:2,
+                              speed:4,
+                              delay:10,
+                              control:true,
+                              _front:"#spec-right",
+                              _back:"#spec-left"
+                            });
+                            $("#spec-list img").bind("mouseover",function(){
+                              var src=$(this).attr("src");
+                              $("#spec-n1 img").eq(0).attr({
+                                src:src.replace("\/n5\/","\/n1\/"),
+                                jqimg:src.replace("\/n5\/","\/n0\/")
+                              });
+                              $(this).css({
+                                "border":"2px solid #ff6600",
+                                "padding":"1px"
+                              });
+                            }).bind("mouseout",function(){
+                              $(this).css({
+                                "border":"1px solid #ccc",
+                                "padding":"2px"
+                              });
+                            });       
+                          })
+                          </SCRIPT>
 
-                        <ul class="con-FangDa-ImgList xiao">
-                            <!-- 图片显示列表 -->
-                            <li class="active"><img src="../img/xiao_cp1.jpg" data-bigimg="../img/da_cp1.jpg"></li>
-                            <li><img src="../img/xiao_cp2.jpg" data-bigimg="../img/da_cp2.jpg"></li>
-                            <li><img src="../img/xiao_cp3.jpg" data-bigimg="../img/da_cp3.jpg"></li>
-                            <li><img src="../img/xiao_cp4.jpg" data-bigimg="../img/da_cp4.jpg"></li>
-                            <li><img src="../img/xiao_cp5.jpg" data-bigimg="../img/da_cp5.jpg"></li>
-                        </ul>
-                        <!-- <div class="xiao"></div> -->
+                        <SCRIPT src="../js/zoomjs/lib.js" type=text/javascript></SCRIPT>
+                        <SCRIPT src="../js/zoomjs/zzsc.js" type=text/javascript></SCRIPT>
+
                     </div>
 
                     <!-- 右边产品参数 -->
                     <div class="cp_r fr">
                         <div class="cpt">
-                            <h2>戴尔 DELL 7572 1745S 15.6英寸 笔记本电脑 i7 8550U 8GB 1TB+128GB 4G独显 银色</h2>
+                            <h2 class="biaoti"></h2>
+
+                            <!-- 戴尔 DELL 7572 1745S 15.6英寸 笔记本电脑 i7 8550U 8GB 1TB+128GB 4G独显 银色 -->
                             <h4>新蛋818返场活动,输入券码NB818,满500-20,满800-30</h4>
                         </div>
 
@@ -380,21 +443,23 @@
                             <div class="cpb_l fl">
                                 <p>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌：&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">DELL 戴尔</a></p>
                                 <p>产品型号：&nbsp;&nbsp;&nbsp;&nbsp;i7 8550U 8GB 1TB+128GB 4G独显 银色</p>
-                                <p>新&nbsp;蛋&nbsp;价&nbsp;：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="money">￥</i><span class="pr">6899.00</span></p>
+                                <p>新&nbsp;蛋&nbsp;价&nbsp;：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="money">￥</i><span class="pr"></span></p>
+
+                                <!-- 6899.00 -->
                                 <p>商品支持：&nbsp;&nbsp;&nbsp;&nbsp;<i class="sday"></i></p>
                                 <p>支持无理由退</p>
                                 <p>型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：&nbsp;&nbsp;&nbsp;&nbsp;<span class="kuang1">i7&nbsp; 8550U</span></p>
                                 <p>颜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;色：&nbsp;&nbsp;&nbsp;&nbsp;<span class="kuang2">蓝色</span></p>
                                 <p><span>数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量：&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                    <a href="#" class="jian">-</a>
+                                    <a class="less">-</a>
                                     <input type="text" value="1" class="num"/>
-                                    <a href="#" class="ga">+</a>
+                                    <a class="ga">+</a>
                                 </p>
                                 
                                 <!-- 加入购物车和立即购买按钮 -->
                                 <div class="buy">
-                                    <div class="goumai"><a href="#">立即购买</a></div>
-                                    <div class="jiaru"><a href="#">加入购物车</a></div>
+                                    <div class="goumai"><a>立即购买</a></div>
+                                    <div class="jiaru"><a>加入购物车</a></div>
                                 </div>
                             </div>
 
