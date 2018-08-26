@@ -5,10 +5,91 @@
         <title>shopping car</title>
 
         <link rel="stylesheet" href="../css/car.css" />
-        <style type="text/css">
+        <link rel="stylesheet" type="text/css" href="../css/list.css" />
+        <script src="../js/jquery-3.2.1.js"></script>
+        <style>
+            ul{list-style: none;padding:0;margin:0;}
+            .carList{padding:20px;}
+            .carList li{position:relative;padding-bottom:15px;margin-bottom:15px;border-bottom:1px solid #ddd;width: 919px;}
+            .carList .img1{display:block;width:100px;}
+            .carList li .btn-close{position:absolute;top:0;right:0;padding:0 5px;cursor:default;}
+            .carList li .btn-close:hover{background-color:#f00;color:#fff;}
+            .subPrice{padding:5px 20px;color:#f00;font-weight:bold;text-align:right;}
+            .carList .price{}
+
+            .carList .name1{
+                    font-size: 12px;
+                    line-height: 25px;
+                }
+            .carList .price span{color:#f00;}
+            .price span::before,.subPrice::before{
+                content:'￥';
+            }
+            #carList .price span{}
+            #btnClear{
+                margin-left: 20px;
+                color:#666;
+                width: 100px;
+                height: 30px;
+                border:1px solid #ccc;
+                background: #ddd;
+                line-height: 30px;
+                display:inline-block;
+                margin-bottom: 20px;
+                text-align: center;
+            }
         </style>
+        <script src="../js/common.js"></script>
 
         <script src="../js/car.js"></script>
+
+        <script>
+            jQuery(function($){
+
+                    //实例化一个异步请求对象
+                    var xhr = new XMLHttpRequest();
+
+                    xhr.onload = function(){
+
+                        if(xhr.status === 200){
+                            //确认数据接收完毕
+                    //在此获取数据：responseText
+                    // var data = JSON.parse(xhr.responseText);
+                    // console.log(xhr.responseText);
+
+                    var datalist = JSON.parse(xhr.responseText);
+
+                    // console.log(data);
+
+                    let data = datalist.slice(0,4);
+
+                    //获取元素
+                    var price = document.querySelector('#price');
+                    var date = document.querySelector('#date');   
+                    var goodslist = document.querySelector('.goodslist');
+
+
+
+                    goodslist.innerHTML = data.map(function(item,idx){
+                        return `<li class="pro2" data-id=${item.id}>
+                            <img class="img1" src="../img/${item.imgurl}"/>
+                            <h4 class="name1">${item.title}</h4> 
+                            <p class="qty">销量：${item.salesqty}</p>
+                            <p class="jiage">￥${item.price}</p>
+                        </li>`
+                    }).join('\n');
+                }
+
+            }
+
+             //配置参数，建立与服务器连接
+                xhr.open('get','../api/list.php',true);
+
+
+                //发起请求
+                xhr.send();
+        });
+        </script>
     </head>
     <body>
         <div class="car-head">
@@ -31,12 +112,19 @@
                 
             </div>
         </div>
-
+        
+        <!-- 购物车 -->
         <div class="carcenter">
             <div class="container">
                 <div class="kache">
                     <h3 class="cartitle">我的购物车</h3>
                     <ul class="carList"></ul>
+                        
+
+                    
+                    
+
+
 
                     <div class="subPrice"></div>
                     <a href="#" id="btnClear">清空购物车</a>
@@ -48,7 +136,7 @@
             <div class="container">
                 <div class="pro">
                     <h3 class="feng">疯抢商品</h3>
-                    <ul class="pin"></ul>
+                    <ul class="pin goodslist"></ul>
                 </div>
             </div>
         </div>

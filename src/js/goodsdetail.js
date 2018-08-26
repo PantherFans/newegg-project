@@ -105,11 +105,6 @@ document.addEventListener('DOMContentLoaded',()=>{
         xhr.open('get','../api/addcar.php?id='+a.id+'&num='+_num,true);
 
         
-        
-
-             
-
-
         //发起请求
         xhr.send();
 
