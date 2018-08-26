@@ -23,39 +23,65 @@ document.addEventListener('DOMContentLoaded',()=>{
             var oSubPrice = oCarList.nextElementSibling;
             var btnClear = document.querySelector('#btnClear');
 
+            
+            // 清空购物车
+            // 删除goodslist这个cookie
+            btnClear.onclick = function(e){
+                // 清空cookie
+                // data.remove('carList');
+
+                // 清空goodslist数组
+                 var carList = document.querySelector('.carList');
+                 carList.innerHTML = [];
+                console.log(carList)
+                     
+                // render();
+             
+
+                e.preventDefault();
+
+                // 手动刷新页面
+                // location.reload()
+            }
+
+
             // 删除单个商品
         // * 找出删除的商品 -> 从数组中移除
             oCarList.onclick = function(e){
                 e = e || window.event;
-
+                var carList = document.querySelector('.carList');
                 var target = e.target || e.srcElement;
-
+                
+                     
                 // 判断是否点击了按钮
                 if(target.className === 'btn-close'){
-                    //获取当前li
+                    // //获取当前li
                     var currentLi = target.parentNode;
+                    var carList = document.querySelector('.carList');
 
                     //获取当前商品的guid
                     var guid = currentLi.getAttribute('data-guid');
 
-                    //找出数组中对应商品并移除
-                    for(var i=0;i<carList.length;i++){
-                        if(carList[i].guid === guid){
-                            carList.splice(i,1);
-                            break;
-                        }
-                    }
+                    
 
-                    render();
+                    // render();
+                    console.log(currentLi);
+                    carList.removeChild(currentLi);
+                         
                 }
             }
             function render(){
                 var carList = document.querySelector('.carList');
+                var oCarList = document.querySelector('.carList');
+                var oSubPrice = oCarList.nextElementSibling;
+                var btnClear = document.querySelector('#btnClear');
 
                 var total = 0;
 
                 carList.innerHTML = data.map(function(item,idx){
-                    return `<li class="pro1" data-id=${item.id}>
+
+                    total += item.price * item.qty;
+                    return `<li class="pro1" data-guid=${item.id}>
                         <img class="img1" src="../img/${item.imgurl}"/>
                         <h4 class="name">${item.title}</h4> 
                         <p class="price">价格：<span>${item.price}</span>&times;${item.qty}</p>
@@ -65,6 +91,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 
                 // 写入总价
             oSubPrice.innerHTML = total.toFixed(2);
+            // oSubPrice.innerHTML = '123';
+            
+            // console.log(oSubPrice);
+                 
             }
 
         }
